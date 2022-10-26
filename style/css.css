@@ -44,13 +44,14 @@ h2 {
 }
 
 .container {  display: grid;
-    grid-template-columns: 0.8fr 1.7fr 0.5fr;
+    grid-template-columns: 0.8fr 1.7fr 1fr;
+    grid-template-rows:  0fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
       "header header header"
       "body body body"
-      "body body body";
+      "footer footer footer";
   }
 
 
@@ -59,7 +60,7 @@ h2 {
     background-image: linear-gradient(to right, #F9C80E 75%,#000000);
     border-bottom: solid;
     display: grid;
-    grid-template-columns: 1fr 1fr 0.5fr 1fr 1fr; 
+    grid-template-columns: 1fr 1fr 0.5fr 0.5fr 1fr 1fr 1fr; 
     grid-template-rows: 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
@@ -97,7 +98,7 @@ h2 {
   .body {  
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -119,6 +120,22 @@ h2 {
         "controller-menu";
       grid-area: body;
   }
+
+  .option-text .text {
+    color: white;
+    font-family:'Quicksand', sans-serif;
+    font-size: 4vw !important;
+    
+    width: auto;
+    align-content: center;
+
+    align-self: center;
+    padding: 5px;
+    text-align: center;
+    color: white;
+
+  }
+
   .dot {
     height: 15vw !important;
     width: 15vw !important;
@@ -266,6 +283,14 @@ h2 {
       
     }
 
+    .dot {
+      height: 5vw !important;
+      width: 5vw !important;
+      margin: 10%;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
     .company-name {
       font-size: 22px;
       
@@ -370,4 +395,9 @@ h2 {
   .option9 { grid-area: option9; }
   
   .price { grid-area: price; }
+
+  .footer {
+    height: 100px;
+    width: 100vw;
+  }
   
