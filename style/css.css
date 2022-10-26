@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkalami&family=Quicksand&family=Silkscreen&display=swap');
+
+body {
+    margin: 0px;
+    background-image: linear-gradient(to right, #F9C80E 75%,#000000);
+
+  }
+
+.controller {
+  width: 80%;
+  margin: 10%;
+  height: auto;
+  position: relative;
+  max-width: 560px;
+  max-height: 387px;
+}
+
+h2 {
+  font-size: 2vw;
+  
+}
+
+
+.company-name {
+  font-size: 2vw;
+  align-self: center;
+  font-family: 'Silkscreen', cursive;
+  margin-block-start: 35px;
+  margin-block-end: 20px;
+  border: solid;
+  padding: 5px;
+  margin-left: 20px;
+}
+
+.header-menu-button {
+  align-self: center;
+  font-family: 'Silkscreen', cursive;
+  margin-block-start: 35px;
+  margin-block-end: 20px;
+  padding: 5px;
+  max-height: 40px;
+  text-align: center;
+  color: white;
+}
+
+.container {  display: grid;
+    grid-template-columns: 0.8fr 1.7fr 0.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header header header"
+      "body body body"
+      "body body body";
+  }
+
+
+  
+  .header {  
+    background-image: linear-gradient(to right, #F9C80E 75%,#000000);
+    border-bottom: solid;
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.5fr 1fr 1fr; 
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "logo company company empty home faqs register shop";
+    grid-area: header;
+  }
+  
+  .logo { 
+    max-width: 120px;
+    max-height: 120px;
+    grid-area: logo;
+    }
+.logo img {
+        margin: 5px;
+    }
+
+  .company { 
+    grid-area: company;
+    vertical-align:middle;
+   }
+  
+  .home { 
+    grid-area: home; 
+    vertical-align: middle;
+    align-items: center;
+  }
+  
+  .faqs { grid-area: faqs; }
+  
+  .register { grid-area: register; }
+  
+  .shop { grid-area: shop; }
+  
+  .body {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "img img controller-menu"
+      "img img controller-menu"
+      ". . .";
+    grid-area: body;
+  }
+
+  @media screen and (max-width: 400px) {
+    .body {  
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.8fr 1fr;
+      gap: 0px 0px;
+      grid-auto-flow: row;
+      grid-template-areas:
+        "img"
+        "controller-menu";
+      grid-area: body;
+  }
+  .dot {
+    height: 15vw !important;
+    width: 15vw !important;
+    margin: 10%;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .header {  
+    background-image: linear-gradient(to right, #F9C80E 75%,#000000);
+    border-bottom: solid;
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.5fr 1fr 1fr ;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "company company company empty home faqs register shop";
+    grid-area: header;
+    max-height: 90px;
+  }
+
+  .logo_img {
+    visibility: hidden;
+  }
+
+  
+}
+
+  .logo img {
+    width: 14vw;
+    height: 14vw;
+    max-width: 110px;
+    max-height: 110px;
+  }
+  .img { 
+    grid-area: img;
+    background-color: #FFF6A2;
+    border: solid;
+    border-top: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+  
+  .controller-menu {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 1.6fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "controller-menu-top controller-menu-top controller-menu-top"
+      "controller-menu-options controller-menu-options controller-menu-options"
+      "price price price";
+    grid-area: controller-menu;
+  }
+  
+  .controller-menu-top { 
+    grid-area: controller-menu-top; 
+    background-color: #000000;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "controller-part-option option-text";
+  }
+  
+  .controller-part-option{
+    grid-area: controller-part-option; 
+    background-color: #000000;
+
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "left-arrow image right-arrow";
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .controller-part-option .left-arrow img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+
+  .controller-part-option .image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+
+  .controller-part-option .right-arrow img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+
+  .option-text .text {
+    color: white;
+    font-family:'Quicksand', sans-serif;
+    font-size: 2vw;
+    
+    width: auto;
+    align-content: center;
+
+    align-self: center;
+    padding: 5px;
+    text-align: center;
+    color: white;
+
+  }
+
+  .price {
+    background-color:#FFF6A2;
+    border: solid;
+    border-left: 0px;
+    }
+
+  .price .text {
+    color: black;
+    font-family:'Quicksand', sans-serif;
+    font-size: 2vw;
+
+    padding: 5px;
+    text-align: center;
+
+  }
+
+  .price .preu {
+    padding: 5px;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    h2 {
+      font-size: 20px;
+      
+    }
+
+    .company-name {
+      font-size: 22px;
+      
+    }
+    
+    .option-text .text {
+       font-size: 25px;
+    }
+
+    .controller-menu-top {
+      height: 82px;
+    }
+    .controller-part-option {
+      height: 82px;
+    }
+
+    .controller-part-option .left-arrow {
+      height: 82px;
+    }
+    .controller-part-option .image{
+      height: 82px;
+    }
+    .controller-part-option .right-arrow {
+      height: 82px;
+    }
+  }
+
+  .option-text {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .controller-menu-options {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "option option2 option3"
+      "option4 option5 option6"
+      "option7 option8 option9";
+    grid-area: controller-menu-options;
+
+  }
+  
+  .option, .option2, .option3, .option4, .option5, .option6 { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dot {
+    height: 7vw;
+    width: 7vw;
+    margin: 10%;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .option .dot  {
+    background-color: black;
+    
+  }
+  
+  .option2 { grid-area: option2; }
+
+  .option2 .dot  {
+    background-color: white;
+  }
+  
+  .option3 { grid-area: option3; }
+
+  .option3 .dot  {
+    background-color: orange;
+  }
+  
+  .option4 { grid-area: option4; }
+
+  .option4 .dot  {
+    background-color: rgb(178, 9, 9);
+  }
+  
+  .option5 { grid-area: option5; }
+
+  .option5 .dot  {
+    background-color: rgb(15, 196, 63);
+  }
+  
+  .option6 { grid-area: option6; }
+
+  .option6 .dot  {
+    background-color: rgb(255, 0, 230);
+  }
+  
+  .option7 { grid-area: option7; }
+  
+  .option8 { grid-area: option8; }
+  
+  .option9 { grid-area: option9; }
+  
+  .price { grid-area: price; }
+  
